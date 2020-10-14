@@ -1,0 +1,28 @@
+{
+  "name": "Opensource Music School and Courses Management Software",
+  "description": "A micro service to manage a Music School and all Courses, students and teachers and much more...",
+  "success_ur": "/api/v1/swagger.json",
+  "keywords": ["ruby", "microservice", "opensource"],
+  "repository": "https://github.com/sfeuga/MSCM-backend",
+  "image": "heroku/ruby",
+  "addons": ["papertrail", "librato", "rollbar"],
+  "env": {
+    "LANG": {
+      "description": "Default languages",
+      "value": "en_US.UTF-8"
+    },
+    "RACK_ENV": {
+      "description": "Rack environment",
+      "value": "production"
+    },
+    "WEB_TIMEOUT": {
+      "description": "Default API timeout",
+      "value": "30"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-ruby"
+    }
+  ]
+}

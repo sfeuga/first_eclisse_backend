@@ -1,0 +1,16 @@
+version: '2'
+services:
+  web:
+    build: .
+    command: bundle exec shotgun -o 0.0.0.0
+    ports:
+      - "9393:9393"
+    volumes:
+      - .:/home/app/MSCM-backend
+      - bundle:/bundle
+    environment:
+      RAILS_ENV: development
+
+volumes:
+  bundle:
+    driver: local
